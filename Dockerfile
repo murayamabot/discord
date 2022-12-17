@@ -10,4 +10,4 @@ COPY . .
 
 RUN npm run build
 
-RUN node dist/index.js
+CMD node dist/index.js
