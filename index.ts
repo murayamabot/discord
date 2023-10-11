@@ -1,5 +1,5 @@
 import { Client, GatewayIntentBits } from 'discord.js';
-import { DefaultLogging, Dependencies, Sern, SernEmitter, single, Singleton } from '@sern/handler';
+import { DefaultLogging, makeDependencies, Sern, single, Singleton } from '@sern/handler';
 import 'dotenv/config'
 
 const client = new Client({
@@ -9,21 +9,13 @@ const client = new Client({
 	],
 });
 
-interface MyDependencies extends Dependencies {
-    '@sern/client' : Singleton<Client>;
-    '@sern/logger' : Singleton<DefaultLogging>
-}
-export const useContainer = Sern.makeDependencies<MyDependencies>({
+await makeDependencies({
     build: root => root
-        .add({ '@sern/client': single(client)  }) 
-        .add({ '@sern/logger': single(new DefaultLogging()) })
+        .add({ '@sern/client': single(() => client)  })
 });
 Sern.init({
 	commands: 'dist/commands',
-	events: 'dist/events',
-	containerConfig: {
-		get: useContainer
-	}
+	events: 'dist/events'
 });
 
 client.login(process.env.TOKEN);
