@@ -16,7 +16,7 @@
   "license": "UNLICENSED",
   "dependencies": {
     "@consumet/extensions": "^1.2.11",
-    "@sern/handler": "^3.1.0",
+    "@sern/handler": "^4.0.1",
     "discord.js": "^14.13.0",
     "dotenv": "^16.0.3"
   },

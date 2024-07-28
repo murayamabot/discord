@@ -91,14 +91,27 @@
   resolved "https://registry.yarnpkg.com/@sapphire/snowflake/-/snowflake-3.5.1.tgz#254521c188b49e8b2d4cc048b475fb2b38737fec"
   integrity sha512-BxcYGzgEsdlG0dKAyOm0ehLGm2CafIrfQTZGWgkfKYbj+pNNsorZ7EotuZukc2MT70E0UbppVbtpBrqpzVzjNA==
 
-"@sern/handler@^3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@sern/handler/-/handler-3.1.0.tgz#222f84076b9eb78b136dd71ed7b476d273629b64"
-  integrity sha512-idan6m4h6hQEkqBrne92IPgVnUtOlxHRrn0GqYOfwXaWGmPKnQWbT/lVzx3ytDRXQWoTrubZnF12r5XGS30Znw==
+"@sern/handler@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@sern/handler/-/handler-4.0.1.tgz#1a457b38b4f84a3b37ecf8b0704dd1355bb09e50"
+  integrity sha512-4XO+Do8sXBHe02bJ8hRN7sZI/WaUU+GTCOf9R5kLNhh/YdoRievo6Fd6piJMCYXBoJxri64efafUQ1wVOxNh2g==
   dependencies:
-    iti "^0.6.0"
+    "@sern/ioc" "^1.1.0"
+    callsites "^3.1.0"
+    cron "^3.1.7"
+    deepmerge "^4.3.1"
     rxjs "^7.8.0"
-    ts-results-es "^4.0.0"
+    ts-results-es "^4.1.0"
+
+"@sern/ioc@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@sern/ioc/-/ioc-1.1.0.tgz#7a2a25d10c140e971a94086e12d3fd117a2942b6"
+  integrity sha512-ZjsVY7FKXdZJAxFVFdFuXyb/s2/KB6CtqwxvGoFHEyVt2m1Qq7gnRRaxlrGIX6M5v/WXHst2tQvxLKtj4kbMgg==
+
+"@types/luxon@~3.4.0":
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/@types/luxon/-/luxon-3.4.2.tgz#e4fc7214a420173cea47739c33cdf10874694db7"
+  integrity sha512-TifLZlFudklWlMBfhubvgqTXRzLDI5pCbGa4P8a3wPyUQSW+1xQ5eDsreP9DWHX3tjq1ke96uYG/nwundroWcA==
 
 "@types/node@*":
   version "20.8.3"
@@ -157,6 +170,11 @@ busboy@^1.6.0:
   dependencies:
     streamsearch "^1.1.0"
 
+callsites@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/callsites/-/callsites-3.1.0.tgz#b3630abd8943432f54b3f0519238e33cd7df2f73"
+  integrity sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==
+
 cheerio-select@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/cheerio-select/-/cheerio-select-2.1.0.tgz#4d8673286b8126ca2a8e42740d5e3c4884ae21b4"
@@ -189,6 +207,14 @@ combined-stream@^1.0.8:
   dependencies:
     delayed-stream "~1.0.0"
 
+cron@^3.1.7:
+  version "3.1.7"
+  resolved "https://registry.yarnpkg.com/cron/-/cron-3.1.7.tgz#3423d618ba625e78458fff8cb67001672d49ba0d"
+  integrity sha512-tlBg7ARsAMQLzgwqVxy8AZl/qlTc5nibqYwtNGoCrd+cV+ugI+tvZC1oT/8dFH8W455YrywGykx/KMmAqOr7Jw==
+  dependencies:
+    "@types/luxon" "~3.4.0"
+    luxon "~3.4.0"
+
 cross-spawn@^7.0.3:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-7.0.3.tgz#f73a85b9d5d41d045551c177e2882d4ac85728a6"
@@ -218,6 +244,11 @@ css-what@^6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/css-what/-/css-what-6.1.0.tgz#fb5effcf76f1ddea2c81bdfaa4de44e79bac70f4"
   integrity sha512-HTUrgRJ7r4dsZKU6GjmpfRK1O76h97Z8MfS1G0FozR+oF2kG6Vfe8JE6zwrkbxigziPHinCJ+gCPjA9EaBDtRw==
+
+deepmerge@^4.3.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-4.3.1.tgz#44b5f2147cd3b00d4b56137685966f26fd25dd4a"
+  integrity sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==
 
 delayed-stream@~1.0.0:
   version "1.0.0"
@@ -346,13 +377,6 @@ isexe@^2.0.0:
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==
 
-iti@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/iti/-/iti-0.6.0.tgz#e763b4089fd8e5cbd1eb753a9d93e80ad11f3d9b"
-  integrity sha512-JqujcnAIF3pmzitjbT3acc0LkordU6oHBDvWeT6a25wvEVBddFX3DFx/p6YBwGX1TTFsyLgVZtwhGOknthC96A==
-  dependencies:
-    utility-types "^3.10.0"
-
 lodash.snakecase@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/lodash.snakecase/-/lodash.snakecase-4.1.1.tgz#39d714a35357147837aefd64b5dcbb16becd8f8d"
@@ -362,6 +386,11 @@ lodash@^4.17.21:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
+
+luxon@~3.4.0:
+  version "3.4.4"
+  resolved "https://registry.yarnpkg.com/luxon/-/luxon-3.4.4.tgz#cf20dc27dc532ba41a169c43fdcc0063601577af"
+  integrity sha512-zobTr7akeGHnv7eBOXcRgMeCP6+uyYsczwmeRCauvpvaAltgNyTbLH/+VaEAPUeWBT+1GuNmz4wC/6jtQzbbVA==
 
 magic-bytes.js@^1.0.15:
   version "1.5.0"
@@ -491,10 +520,10 @@ ts-mixer@^6.0.3:
   resolved "https://registry.yarnpkg.com/ts-mixer/-/ts-mixer-6.0.3.tgz#69bd50f406ff39daa369885b16c77a6194c7cae6"
   integrity sha512-k43M7uCG1AkTyxgnmI5MPwKoUvS/bRvLvUb7+Pgpdlmok8AoqmUaZxUUw8zKM5B1lqZrt41GjYgnvAi0fppqgQ==
 
-ts-results-es@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/ts-results-es/-/ts-results-es-4.0.0.tgz#0116b1121c6c6e1b892009983048efb2be0744ff"
-  integrity sha512-v8vi0R4hu3Z5CugRPGA2qnIns4a4j+3/Bkh5Iak041AsBNOYA6DNjoijvHDli76Grt6KvihU6errHX03Fz9Jzw==
+ts-results-es@^4.1.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/ts-results-es/-/ts-results-es-4.2.0.tgz#5cdb5746f50577465421278407d776c66a18cfd2"
+  integrity sha512-GfpRk+qvHxa/6gADH8WMN/jXvs5oHYbKtMQc6X9L3VhToy5Lri3iQowyYSytaRcvPDiTT2z3vurzQZXFQFXKRA==
 
 tsc-watch@^5.0.3:
   version "5.0.3"
@@ -523,11 +552,6 @@ undici@5.22.1:
   integrity sha512-Ji2IJhFXZY0x/0tVBXeQwgPlLWw13GVzpsWPQ3rV50IFMMof2I55PZZxtm4P6iNq+L5znYN9nSTAq0ZyE6lSJw==
   dependencies:
     busboy "^1.6.0"
-
-utility-types@^3.10.0:
-  version "3.10.0"
-  resolved "https://registry.yarnpkg.com/utility-types/-/utility-types-3.10.0.tgz#ea4148f9a741015f05ed74fd615e1d20e6bed82b"
-  integrity sha512-O11mqxmi7wMKCo6HKFt5AhO4BwY3VV68YU07tgxfz8zJTIxr4BpsezN49Ffwy9j3ZpwwJp4fkRwjRzq3uWE6Rg==
 
 which@^2.0.1:
   version "2.0.2"
