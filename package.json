@@ -17,7 +17,7 @@
   "dependencies": {
     "@consumet/extensions": "^1.2.11",
     "@sern/handler": "^3.1.0",
-    "discord.js": "^14.13.0",
+    "discord.js": "^14.15.3",
     "dotenv": "^16.0.3"
   },
   "devDependencies": {
