@@ -21,7 +21,7 @@
     "dotenv": "^16.0.3"
   },
   "devDependencies": {
-    "@types/node": "^17.0.25",
+    "@types/node": "^22.0.2",
     "tsc-watch": "^5.0.3",
     "typescript": "^5.2.2"
   },
